@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import engine
 from app.models import Base
+
 #Replacing @app.on_event("startup")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
