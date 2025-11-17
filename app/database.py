@@ -9,7 +9,7 @@ envfile = {
     "dev": ".env.dev",
     "docker": ".env.docker",
     "test": ".env.test",
-}.get(os.getenv("APP_ENV", "dev"), ".env.dev")
+}.get(os.getenv("APP_ENV", "docker"), ".env.docker")
 load_dotenv(envfile, override=True)
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./app.db")
